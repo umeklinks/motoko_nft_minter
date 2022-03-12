@@ -1,0 +1,35 @@
+{
+  "canisters": {
+    "motoko_nft_minter": {
+      "main": "src/motoko_nft_minter/main.mo",
+      "type": "motoko"
+    },
+    "motoko_nft_minter_assets": {
+      "dependencies": [
+        "motoko_nft_minter"
+      ],
+      "frontend": {
+        "entrypoint": "src/motoko_nft_minter_assets/src/index.html"
+      },
+      "source": [
+        "src/motoko_nft_minter_assets/assets",
+        "dist/motoko_nft_minter_assets/"
+      ],
+      "type": "assets"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "dfx": "0.9.2",
+  "networks": {
+    "local": {
+      "bind": "127.0.0.1:8000",
+      "type": "ephemeral"
+    }
+  },
+  "version": 1
+}
